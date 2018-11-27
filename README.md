@@ -74,7 +74,9 @@ $ seq 5 | rb -l 'send(:*, 10)'
 5555555555
 ```
 
-# 奇数/偶数
+# alias に登録してオレオレCLIツールに
+
+## 奇数/偶数
 
 ```bash
 alias odd="rb 'each_slice(2).map(&:first)'"
@@ -98,7 +100,7 @@ $ seq 10 | even
 10
 ```
 
-# 最大値/最小値を一緒に出す
+## 最大値/最小値を一緒に出す
 
 ```bash
 alias minmax="rb 'minmax'"
@@ -112,7 +114,7 @@ $ seq 10 |  minmax
 9
 ```
 
-# 数値の合計
+## 数値の合計
 
 ```bash
 alias numsum="rb 'map(&:to_i).inject(:+)'"
@@ -125,7 +127,7 @@ $ seq 10 | numsum
 55
 ```
 
-# 文字連結
+## 文字連結
 
 ```bash
 alias strsum="rb 'map(&:chomp).inject(:+)'"
@@ -138,7 +140,7 @@ $ seq 10 | strsum
 12345678910
 ```
 
-# 列を複製
+## 列を複製
 
 ```bash
 alias dup="rb -l '[self, self].join(\"\t\")'"
@@ -160,7 +162,7 @@ $ seq 10 | dup
 10      10
 ```
 
-# CSV to TSV
+## CSV to TSV
 
 ```bash
 alias csv2tsv="rb -l 'CSV.parse(self)[0].join(\"\t\")'"
