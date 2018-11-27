@@ -10,6 +10,12 @@ rb のインストールは次コマンドを実行
 curl https://raw.githubusercontent.com/thisredone/rb/master/rb -o /usr/local/bin/rb && chmod +x ${USER_BIN_PATH}/bin/rb
 ```
 
+## .rbrc を配置
+
+```bash
+cp .rbrc ~/
+```
+
 # 仕組み
 
 STDINを配列として受け取り、 rb コマンドの引数を配列に続くメソッドチェーンとして実行する。
